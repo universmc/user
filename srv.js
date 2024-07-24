@@ -96,21 +96,36 @@ bot.on('message', async (ctx) => {
     if (message.startsWith('/')) {
         return; // Ignorer les commandes
     }
-    const knowleddge = "Message de bienvenue avec emoji intel et de savoir être sur le salon"
+
+    const racine ="./*"
+    const node ="./package.json*"
+    const make ="./Makefile"
+    const cdnJs = `cdnjs.com`;
+    const archiviste = `https://archive.org`;
+    const github = `https://github.com/universmc/user.git`;
+    const dchub_public = `t.me/dchub_01`;
+    const dchub_prive = `t.me/dchub_Pibot`;
+    const user_Pibot = `https://t.me/user_Pibot/`;
+    const youtube_Pibot = `https://t.me/user_Pibot/`;
+    const google_Pibot = `https://t.me/google_Pibot/`;
+    const gemini_Pibot = `https://t.me/gemini_Pibot/`;
+    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+`
+    
+
     const userInput = ctx.message.text;
     
     try {
         const chatCompletion = await groq.chat.completions.create({
             messages: [
                 {role: 'assistant',content:knowleddge},
-                {role: 'assistant',content: "je vais te transmettre ici toutes les dépendances est variable au cœur de ce code source ['knowleddge',+'devine']"},
-                {
-                    role: 'system',
-                    content: "Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @user_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."
-                },                {
-                    role: 'assistant',
-                    content: "Rédigez le developper de la présentation complète du salon télégramme et de l'intelligence artificielle au cœur de ce code source",
-                },
+            //    {role: 'assistant',content: "je vais te transmettre ici toutes les dépendances est variable au cœur de ce code source ['knowleddge',+'devine']"},
+            //    {
+            //        role: 'system',
+            //        content: "Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @user_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."
+            //    },                {
+            //        role: 'assistant',
+            //        content: "Rédigez le developper de la présentation complète du salon télégramme et de l'intelligence artificielle au cœur de ce code source",
+            //    },
                 {
                     role: 'user',
                     content: userInput,

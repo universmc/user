@@ -10,8 +10,7 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "electron .",
       "groq": "node groq-min.js",
-      "saas": "sass --watch src/sass/window.scss src/css/tmp.css",
-      "style": "sass --watch src/sass/windows.scss src/css/style1/playeur.css"
+      "saas": "sass --watch src/sass/style.scss src/css/style.css"
     },
     "Mistral": {
         "model":"mixtral-8x7b-32768",

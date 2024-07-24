@@ -44,12 +44,10 @@ update:
 	@git add .
 	@git commit -m "test"
 	@git push
+	@echo "✨ Mise à jour terminée✨"
 
-init: gantt phase1 phase2 phase3 phase4 phase5 phase6 phase7 phase8
+init: phase1 phase2 phase3 phase4 phase5 phase6 phase7 phase8
 # Magic COMPILER groq quantum
-gantt:
-	@echo "initialisation de l'instance"
-	@git clone auto
 
 phase1:
 	@echo "phase de conception"
