@@ -40,11 +40,11 @@ dev:
 all: $(MAGIC_TARGETS)
 
 update:
-	@echo "✨ Mise en état du dossier de l'enquête sur les partie Politique de la Macronnie ✨"
+	@echo "✨ Mise en état du dossier sur github✨"
 	@git add .
 	@git commit -m "test"
 	@git push
-	
+
 init: gantt phase1 phase2 phase3 phase4 phase5 phase6 phase7 phase8
 # Magic COMPILER groq quantum
 gantt:
